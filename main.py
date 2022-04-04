@@ -3,8 +3,7 @@ import sqlite3
 from PyQt5.QtWidgets import QWidget, QApplication, QListWidgetItem, QMessageBox
 from PyQt5.uic import loadUi
 import sys
-
-from qtconsole.qt import QtCore
+from PyQt5 import QtCore
 
 class Window(QWidget):
     def __init__(self):
