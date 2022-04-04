@@ -8,7 +8,7 @@ from PyQt5 import QtCore
 class Window(QWidget):
     def __init__(self):
         super(Window, self).__init__()
-        loadUi("main.ui", self)
+        loadUi(r"C:\Users\athar\OneDrive\Documents\projects\PyQt5-Daily-Task-Planner-App/gui.ui", self)
         self.calendarWidget.selectionChanged.connect(self.calendarDateChanged)
         self.calendarDateChanged()
         self.saveButton.clicked.connect(self.saveChanges)
@@ -23,7 +23,7 @@ class Window(QWidget):
     def updateTaskList(self, date):
         self.tasksListWidget.clear()
 
-        db = sqlite3.connect("data.db")
+        db = sqlite3.connect(r"C:\Users\athar\OneDrive\Documents\projects\PyQt5-Daily-Task-Planner-App//data.db")
         cursor = db.cursor()
 
         query = "SELECT task, completed FROM tasks WHERE date = ?"
@@ -40,7 +40,7 @@ class Window(QWidget):
 
 
     def saveChanges(self):
-        db = sqlite3.connect("data.db")
+        db = sqlite3.connect(r"C:\Users\athar\OneDrive\Documents\projects\PyQt5-Daily-Task-Planner-App/data.db")
         cursor = db.cursor()
         date = self.calendarWidget.selectedDate().toPyDate()
 
@@ -61,7 +61,7 @@ class Window(QWidget):
         messageBox.exec()
 
     def addNewTask(self):
-        db = sqlite3.connect("data.db")
+        db = sqlite3.connect(r"C:\Users\athar\OneDrive\Documents\projects\PyQt5-Daily-Task-Planner-App/data.db")
         cursor = db.cursor()
 
         newTask = str(self.taskLineEdit.text())
