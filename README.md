@@ -16,6 +16,8 @@ First of all, you have to specify the **EXACT file location** of **"data.db"** a
 3. Now, new folder named "build" will appear, in that you will find **main.exe**
 <p>Now you can share program with anyone, with them too who don't have python installed..!!</p>
 
+## Download [Daily-Task-Planner](https://github.com/athrvvvv/PyQt5-Daily-Task-Planner-App/releases/latest/download/Daily-Task-Planner.zip)
+
 ***
 ## About
 This is the source code a video series about creating a Daily Task Planning app with PyQt5.
